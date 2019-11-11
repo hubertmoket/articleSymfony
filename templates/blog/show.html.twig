@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<article>
+    <h2>{{ article.title }}</h2>
+    <div class="metadata">écrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAT | date('H:i') }} dans la catégorie formation</div>
+    <div class="content">
+        <img src="{{ article.image }}" alt="">
+        {{ article.content | raw }}
+    </div>
+</article>
+{% endblock %}
